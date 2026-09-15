@@ -9,10 +9,17 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+        <div class="container flex-wrap gap-3">
             <a class="navbar-brand" href="{% url 'home' %}">IMS</a>
             {% if user.is_authenticated %}
-            <div class="d-flex text-light align-items-center">
+            <div class="navbar-nav flex-row flex-wrap gap-3 me-auto" aria-label="Navegación principal">
+                {% if perms.catalog.view_category %}<a class="nav-link" href="{% url 'catalog:category_list' %}">Categorías</a>{% endif %}
+                {% if perms.catalog.view_product %}<a class="nav-link" href="{% url 'catalog:product_list' %}">Productos</a>{% endif %}
+                {% if perms.partners.view_supplier %}<a class="nav-link" href="{% url 'partners:supplier_list' %}">Proveedores</a>{% endif %}
+                {% if perms.partners.view_customer %}<a class="nav-link" href="{% url 'partners:customer_list' %}">Clientes</a>{% endif %}
+                {% if perms.inventory.view_location %}<a class="nav-link" href="{% url 'inventory:location_list' %}">Ubicaciones</a>{% endif %}
+            </div>
+            <div class="d-flex text-light align-items-center ms-auto">
                 <span class="me-3">Hola, {{ user.username }}</span>
                 <form method="post" action="{% url 'logout' %}">
                     {% csrf_token %}
@@ -23,6 +30,13 @@
         </div>
     </nav>
     <div class="container mt-4">
+        {% if messages %}
+        <div aria-live="polite">
+            {% for message in messages %}
+            <div class="alert {% if message.tags == 'error' %}alert-danger{% elif message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="status">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
         {% block content %}{% endblock %}
     </div>
 </body>

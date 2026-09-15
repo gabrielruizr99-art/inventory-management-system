@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Eliminar ubicación | IMS{% endblock %}
+{% block content %}<h1>Eliminación administrativa de ubicación</h1><div class="alert alert-warning">La desactivación es el flujo normal. La eliminación física de <strong>{{ object }}</strong> es excepcional.</div><form method="post">{% csrf_token %}<button class="btn btn-danger">Confirmar eliminación física</button> <a class="btn btn-outline-secondary" href="{% url 'inventory:location_detail' object.pk %}">Cancelar</a></form>{% endblock %}
