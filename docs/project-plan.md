@@ -92,7 +92,7 @@ No deben almacenarse contraseñas, tokens ni datos sensibles en auditoría.
 
 ## F. FASES VERIFICABLES
 
-**Fase 1 — Base técnica y autenticación:**
+**Fase 1 — Base técnica y autenticación — COMPLETADA:**
 - `.venv`.
 - Django 5.2 LTS.
 - PostgreSQL.
@@ -106,17 +106,22 @@ No deben almacenarse contraseñas, tokens ni datos sensibles en auditoría.
 - GitHub Actions con PostgreSQL;
 - pruebas iniciales.
 
-**Fase 2 — Catálogo, socios y ubicaciones:**
+**Fase 2 — Catálogo, socios y ubicaciones — COMPLETADA:**
 - categorías;
 - productos;
 - clientes;
 - proveedores;
 - ubicaciones;
-- CRUD;
-- permisos;
-- pruebas.
+- CRUD con plantillas Django y Bootstrap;
+- búsqueda, filtros y paginación;
+- activación, desactivación y eliminación administrativa segura;
+- autorización mediante grupos y permisos Django;
+- pruebas funcionales, de seguridad y regresión.
 
-**Fase 3 — Motor de inventario:**
+Las migraciones aditivas, la autorización y los flujos web de esta fase fueron verificados con
+PostgreSQL, pruebas automatizadas y controles de calidad.
+
+**Fase 3 — Motor de inventario — PENDIENTE:**
 - balances;
 - movimientos;
 - ajustes;
@@ -126,20 +131,20 @@ No deben almacenarse contraseñas, tokens ni datos sensibles en auditoría.
 - prevención de stock negativo;
 - pruebas de invariantes.
 
-**Fase 4 — Compras:**
+**Fase 4 — Compras — PENDIENTE:**
 - encabezado y detalles;
 - borrador, confirmación y anulación;
 - entradas de inventario;
 - pruebas.
 
-**Fase 5 — Ventas:**
+**Fase 5 — Ventas — PENDIENTE:**
 - encabezado y detalles;
 - borrador, confirmación y anulación;
 - salidas de inventario;
 - comprobación de disponibilidad;
 - pruebas.
 
-**Fase 6 — Dashboard, alertas y reportes:**
+**Fase 6 — Dashboard, alertas y reportes — PENDIENTE:**
 - indicadores;
 - Chart.js;
 - stock mínimo;
@@ -147,7 +152,7 @@ No deben almacenarse contraseñas, tokens ni datos sensibles en auditoría.
 - exportación CSV;
 - pruebas.
 
-**Fase 7 — Auditoría, seguridad y experiencia:**
+**Fase 7 — Auditoría, seguridad y experiencia — PENDIENTE:**
 - eventos de auditoría;
 - revisión integral de permisos;
 - manejo seguro de errores;
@@ -155,7 +160,7 @@ No deben almacenarse contraseñas, tokens ni datos sensibles en auditoría.
 - optimización de consultas;
 - pruebas.
 
-**Fase 8 — Documentación y publicación:**
+**Fase 8 — Documentación y publicación — PENDIENTE:**
 - README final;
 - instalación reproducible;
 - capturas;

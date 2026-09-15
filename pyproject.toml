@@ -1,7 +1,7 @@
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
-addopts = "--cov=core --cov=accounts --cov=config --cov-report=term-missing --cov-fail-under=80"
+addopts = "--cov=core --cov=accounts --cov=config --cov=catalog --cov=partners --cov=inventory --cov-report=term-missing --cov-fail-under=80"
 
 [tool.coverage.run]
 omit = [

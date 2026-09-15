@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ category.name }} | IMS{% endblock %}
+{% block content %}
+<h1>{{ category.name }}</h1>
+<dl class="row"><dt class="col-sm-3">Descripción</dt><dd class="col-sm-9">{{ category.description|default:"Sin descripción" }}</dd><dt class="col-sm-3">Estado</dt><dd class="col-sm-9">{% if category.is_active %}Activo{% else %}Inactivo{% endif %}</dd></dl>
+<div class="d-flex flex-wrap gap-2">
+<a class="btn btn-outline-secondary" href="{% url 'catalog:category_list' %}">Volver</a>
+{% if perms.catalog.change_category %}<a class="btn btn-primary" href="{% url 'catalog:category_update' category.pk %}">Editar</a>{% endif %}
+{% if perms.catalog.change_category_status %}<form method="post" action="{% url 'catalog:category_status' category.pk %}">{% csrf_token %}<button class="btn btn-warning">{% if category.is_active %}Desactivar{% else %}Activar{% endif %}</button></form>{% endif %}
+{% if perms.catalog.delete_category %}<a class="btn btn-outline-danger" href="{% url 'catalog:category_delete' category.pk %}">Eliminación administrativa</a>{% endif %}
+</div>
+{% endblock %}

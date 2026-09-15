@@ -25,3 +25,16 @@
 23. Las operaciones confirmadas no deben eliminarse; deben anularse o revertirse mediante operaciones trazables.
 24. Seguridad, permisos y pruebas son requisitos de todas las fases, no únicamente de la fase final.
 25. Bootstrap y Chart.js se utilizarán sin introducir React ni una API separada durante el MVP.
+
+## Estado Operativo Actual
+
+- Fase 1 completada.
+- Fase 2 completada y verificada.
+- Fase 3 es la siguiente etapa planificada y no debe iniciarse sin autorización expresa.
+- Fase 4 y posteriores permanecen pendientes.
+- Aplicaciones disponibles: `core`, `accounts`, `catalog`, `partners` e `inventory`.
+- Estado de calidad: 91 pruebas aprobadas, cobertura actual del 100 % y umbral obligatorio del
+  80 %.
+- PostgreSQL es el único backend autorizado.
+- Se mantienen vigentes todas las reglas de seguridad, PostgreSQL exclusivo y control de Git
+  descritas arriba.

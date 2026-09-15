@@ -20,3 +20,14 @@
 - Durante el MVP usa plantillas Django, Bootstrap, JavaScript mínimo y Chart.js; no añadas React ni una API separada.
 - Avanza por las fases de `docs/project-plan.md`; no implementes fases posteriores sin autorización.
 - Identifica explícitamente como ficticias todas las contraseñas usadas en pruebas o CI.
+
+## Estado Operativo Actual
+
+- Fase 1 completada.
+- Fase 2 completada y verificada.
+- Fase 3 es la siguiente etapa planificada; no iniciarla sin autorización expresa.
+- Fase 4 y posteriores permanecen pendientes.
+- Aplicaciones disponibles: `core`, `accounts`, `catalog`, `partners` e `inventory`.
+- Verificación actual: 91 pruebas aprobadas y cobertura del 100 %; umbral obligatorio del 80 %.
+- PostgreSQL es el único backend autorizado.
+- Todo commit, push, merge, tag o release requiere autorización explícita.
