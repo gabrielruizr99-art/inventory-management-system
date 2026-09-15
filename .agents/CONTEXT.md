@@ -25,3 +25,18 @@
 23. Las operaciones confirmadas no deben eliminarse; deben anularse o revertirse mediante operaciones trazables.
 24. Seguridad, permisos y pruebas son requisitos de todas las fases, no únicamente de la fase final.
 25. Bootstrap y Chart.js se utilizarán sin introducir React ni una API separada durante el MVP.
+
+## Estado Operativo Actual
+
+- Rama de trabajo: `feature/phase-2-master-data`.
+- Último commit de implementación: `299d373 feat: add phase 2 master data CRUD`.
+- Fase 1 completada.
+- Fase 2 implementada localmente y pendiente de commit documental e integración en `main`.
+- Fase 3 y posteriores pendientes y no autorizadas.
+- Aplicaciones disponibles: `core`, `accounts`, `catalog`, `partners` e `inventory`.
+- Estado de calidad: 91 pruebas aprobadas, cobertura actual del 100 % y umbral obligatorio del
+  80 %.
+- Siguiente bloque previsto: cierre documental e integración controlada de la Fase 2, previa
+  autorización expresa.
+- Se mantienen vigentes todas las reglas de seguridad, PostgreSQL exclusivo y control de Git
+  descritas arriba.

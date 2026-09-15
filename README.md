@@ -14,12 +14,39 @@ Proveer un MVP robusto y mantenible que permita el control de existencias, el re
 ## Estructura Resumida
 - `core`: utilidades compartidas, vistas globales y página inicial.
 - `accounts`: custom user model y gestión de autenticación, grupos y permisos.
+- `catalog`: categorías y productos.
+- `partners`: proveedores y clientes.
+- `inventory`: ubicaciones; el motor de existencias se implementará en la Fase 3.
 - `config`: configuración principal del proyecto Django.
 - `requirements/`: archivos de dependencias exactas (`base.txt` y `dev.txt`).
 - `.github/workflows/`: configuración de CI para GitHub Actions.
 
 ## Estado Actual del Proyecto
-El proyecto ha completado la **Fase 1**. Se encuentra implementada la base técnica, entorno virtual, dependencias, proyecto Django, modelo de usuario personalizado, grupos de roles iniciales, interfaz base (Bootstrap 5), y las configuraciones de Pytest y Ruff, asegurado con CI en GitHub Actions. Aún no se ha desarrollado la lógica de catálogo, compras o ventas.
+La **Fase 1 está completada**. La **Fase 2 está implementada localmente** en la rama
+`feature/phase-2-master-data` y permanece pendiente de integración en `main`.
+
+La Fase 2 incorpora:
+
+- modelos `Category`, `Product`, `Supplier`, `Customer` y `Location`;
+- CRUD con plantillas Django y Bootstrap;
+- búsqueda, filtros validados y paginación;
+- activación y desactivación mediante operaciones POST;
+- eliminación administrativa segura, con manejo de relaciones protegidas;
+- autorización por grupos y permisos efectivos de Django;
+- 91 pruebas aprobadas y cobertura actual del 100 %.
+
+La cobertura puede variar a medida que el proyecto crezca. El umbral obligatorio se mantiene
+en 80 %. La Fase 3 y las fases posteriores todavía no están implementadas.
+
+### Matriz resumida de roles
+
+- **Administrador:** acceso completo a catálogo, socios y ubicaciones, incluida la eliminación
+  administrativa.
+- **Vendedor:** consulta categorías, productos y ubicaciones; administra clientes.
+- **Almacén:** administra categorías, productos y proveedores; consulta ubicaciones.
+
+La autorización de cada endpoint se comprueba mediante permisos Django, no únicamente por el
+nombre del grupo ni por la visibilidad de la navegación.
 
 🔗 [Ver Plan de Proyecto y Fases](docs/project-plan.md)
 🔗 [Ver Reglas del Proyecto](.agents/CONTEXT.md)
@@ -83,7 +110,7 @@ python -m venv .venv
 
 ### Ejecutar Pruebas Automatizadas (Pytest)
 ```powershell
-.venv\Scripts\pytest.exe
+.venv\Scripts\python.exe -m pytest
 ```
 
 ### Linter y Formato (Ruff)

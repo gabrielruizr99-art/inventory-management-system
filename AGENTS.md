@@ -20,3 +20,16 @@
 - Durante el MVP usa plantillas Django, Bootstrap, JavaScript mínimo y Chart.js; no añadas React ni una API separada.
 - Avanza por las fases de `docs/project-plan.md`; no implementes fases posteriores sin autorización.
 - Identifica explícitamente como ficticias todas las contraseñas usadas en pruebas o CI.
+
+## Estado Operativo Actual
+
+- Rama de trabajo: `feature/phase-2-master-data`.
+- Último commit de implementación: `299d373 feat: add phase 2 master data CRUD`.
+- Fase 1 completada.
+- Fase 2 implementada localmente y pendiente de commit documental e integración en `main`.
+- Fase 3 y posteriores pendientes; no iniciarlas sin autorización expresa.
+- Aplicaciones disponibles: `core`, `accounts`, `catalog`, `partners` e `inventory`.
+- Verificación actual: 91 pruebas aprobadas y cobertura del 100 %; umbral obligatorio del 80 %.
+- Siguiente bloque previsto: cierre documental e integración controlada de la Fase 2, únicamente
+  con autorización explícita.
+- La rama no debe publicarse, integrarse ni etiquetarse sin autorización expresa.
