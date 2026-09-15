@@ -28,15 +28,13 @@
 
 ## Estado Operativo Actual
 
-- Rama de trabajo: `feature/phase-2-master-data`.
-- Último commit de implementación: `299d373 feat: add phase 2 master data CRUD`.
 - Fase 1 completada.
-- Fase 2 implementada localmente y pendiente de commit documental e integración en `main`.
-- Fase 3 y posteriores pendientes y no autorizadas.
+- Fase 2 completada y verificada.
+- Fase 3 es la siguiente etapa planificada y no debe iniciarse sin autorización expresa.
+- Fase 4 y posteriores permanecen pendientes.
 - Aplicaciones disponibles: `core`, `accounts`, `catalog`, `partners` e `inventory`.
 - Estado de calidad: 91 pruebas aprobadas, cobertura actual del 100 % y umbral obligatorio del
   80 %.
-- Siguiente bloque previsto: cierre documental e integración controlada de la Fase 2, previa
-  autorización expresa.
+- PostgreSQL es el único backend autorizado.
 - Se mantienen vigentes todas las reglas de seguridad, PostgreSQL exclusivo y control de Git
   descritas arriba.

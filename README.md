@@ -22,8 +22,8 @@ Proveer un MVP robusto y mantenible que permita el control de existencias, el re
 - `.github/workflows/`: configuración de CI para GitHub Actions.
 
 ## Estado Actual del Proyecto
-La **Fase 1 está completada**. La **Fase 2 está implementada localmente** en la rama
-`feature/phase-2-master-data` y permanece pendiente de integración en `main`.
+La **Fase 1 está completada** y la **Fase 2 está completada y verificada**. La Fase 3 es la
+siguiente fase planificada, pero su implementación todavía no ha comenzado.
 
 La Fase 2 incorpora:
 
@@ -36,7 +36,7 @@ La Fase 2 incorpora:
 - 91 pruebas aprobadas y cobertura actual del 100 %.
 
 La cobertura puede variar a medida que el proyecto crezca. El umbral obligatorio se mantiene
-en 80 %. La Fase 3 y las fases posteriores todavía no están implementadas.
+en 80 %. La Fase 3 y las fases posteriores permanecen pendientes.
 
 ### Matriz resumida de roles
 

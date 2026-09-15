@@ -106,7 +106,7 @@ No deben almacenarse contraseñas, tokens ni datos sensibles en auditoría.
 - GitHub Actions con PostgreSQL;
 - pruebas iniciales.
 
-**Fase 2 — Catálogo, socios y ubicaciones — IMPLEMENTADA EN RAMA DE TRABAJO, PENDIENTE DE INTEGRACIÓN:**
+**Fase 2 — Catálogo, socios y ubicaciones — COMPLETADA:**
 - categorías;
 - productos;
 - clientes;
@@ -118,9 +118,8 @@ No deben almacenarse contraseñas, tokens ni datos sensibles en auditoría.
 - autorización mediante grupos y permisos Django;
 - pruebas funcionales, de seguridad y regresión.
 
-La implementación se encuentra en `feature/phase-2-master-data`. Sus migraciones aditivas se
-aplicaron y verificaron en la base local autorizada, pero la fase aún no está integrada en
-`main` ni publicada como cierre de fase.
+Las migraciones aditivas, la autorización y los flujos web de esta fase fueron verificados con
+PostgreSQL, pruebas automatizadas y controles de calidad.
 
 **Fase 3 — Motor de inventario — PENDIENTE:**
 - balances;
